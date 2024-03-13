@@ -1,1 +1,3 @@
-console.log(tempData);
+const get = require("./get")
+
+get();

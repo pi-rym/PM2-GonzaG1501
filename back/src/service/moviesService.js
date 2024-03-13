@@ -1,4 +1,21 @@
-const tempData = [
+class Movies {
+  constructor(movie) {
+    const { title, director, poster, year, duration, genre, rate } = movie;
+    if (!title || !director || !poster) {
+      console.log("error");
+    } else {
+      this.title = title;
+      this.director = director;
+      this.poster = poster;
+    }
+    this.year = year;
+    this.duration = duration;
+    this.genre = genre;
+    this.rate = rate;
+  }
+}
+
+const movies = [
   {
     title: "Guardians of the Galaxy Vol. 2",
     year: 2017,
@@ -30,3 +47,15 @@ const tempData = [
       "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
   },
 ];
+
+const moviesS = {
+  getMovies: async () => {
+    try {
+      return movies.map((movie) => new Movies(movie));
+    } catch (error) {
+      error: "error";
+    }
+  },
+};
+
+module.exports = moviesS;
