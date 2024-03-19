@@ -1,3 +1,3 @@
-const get = require("./get")
+const get = require("./handler");
 
 get();

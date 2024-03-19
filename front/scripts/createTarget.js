@@ -1,20 +1,27 @@
-const createTarget = ({title, poster, year, director, duration, genre, rate}) => {
-    const target = document.createElement("div");
-    target.classList.add("targ", "container");
+const createTarget = ({
+  title,
+  poster,
+  year,
+  director,
+  duration,
+  genre,
+  rate,
+}) => {
+  const target = document.createElement("div");
+  target.classList.add("targ", "carousel-inner");
 
-    target.innerHTML=`<h2 class="targTitle">${title}</h2>
-    <div class="target">
-        <img src="${poster}" alt="${title}" class="targImg">
-        <div class="targInfo">
-            <h3>title:${title}</h3>
-            <h3>year:${year}</h3>
-            <h3>director:${director}</h3>
-            <h3>duration:${duration}</h3>
-            <h3>genre:${genre}</h3>
-            <h3>rate:${rate}</h3>
-        </div>
-    </div>`
-    return target
-}
+  target.innerHTML = `
+  <img src="${poster}" class="d-block w-100" alt="${title}">
+  <div class="carousel-caption d-none d-md-block info">
+  <h5>${title}</h5>
+  <p>Year: ${year}</p>
+  <p>Director: ${director}</p>
+  <p>Duration: ${duration}</p>
+  <p>Genre: ${genre}</p>
+  <p>Rate: ${rate}</p>
+  </div>
+  `;
+  return target;
+};
 
-module.exports = createTarget
+module.exports = createTarget;
