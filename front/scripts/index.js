@@ -1,3 +1,10 @@
-const get = require("./handler");
+const { get, submit } = require("./handler");
 
-get();
+document.addEventListener("DOMContentLoaded", async () => {
+  await get();
+});
+
+document.getElementById("submitButton").addEventListener("click", (event) => {
+  event.preventDefault();
+  submit();
+});
