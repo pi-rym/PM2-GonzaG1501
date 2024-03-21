@@ -58,10 +58,13 @@ const moviesS = {
       // return moviesData.data.map((movie) => new Movies(movie));
       // return movies.map((movie) => new Movies(movie));
       const moviesData = await Movie.find();
-      return moviesData.map((movie) => new Movies(movie));
+      return moviesData;
     } catch (error) {
       return "Error", error.message;
     }
+  },
+  createMovies: async (movie) => {
+    await Movie.create(movie);
   },
 };
 

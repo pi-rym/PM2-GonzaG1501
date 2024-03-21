@@ -1,9 +1,11 @@
 const server = require("./src/server");
 const dbCon = require("./src/config/dbCon");
+require("dotenv").config();
+const port = process.env.PORT;
 
 dbCon()
   .then((res) => {
-    server.listen(3000, () => {
+    server.listen(port, () => {
       console.log("servi-DOU");
     });
   })
