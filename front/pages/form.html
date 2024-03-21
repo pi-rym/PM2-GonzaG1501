@@ -55,11 +55,12 @@
             <a href="./history.html">Historia Del Cine</a>
           </li>
           <li><a href="./websRecomen.html">Webs Recomendadas</a></li>
-          <li><a href="./form.html" class="mx-2" id="pag">Form</a></li>
+          <li><a href="./form.html" class="mx-2" id="pag">Add Movie</a></li>
         </ul>
       </nav>
     </header>
     <main>
+      <div id="formMessage"></div>
       <form class="container" id="formu" method="post">
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
@@ -67,7 +68,13 @@
         </div>
         <div class="mb-3">
           <label for="year" class="form-label">Year</label>
-          <input type="number" class="form-control" id="year" />
+          <input
+            type="number"
+            class="form-control"
+            id="year"
+            min="1880"
+            max="2024"
+          />
         </div>
         <div class="mb-3">
           <label for="director" class="form-label">Director</label>
@@ -77,10 +84,16 @@
           <label for="duration" class="form-label">Duration</label>
           <input type="text" class="form-control" id="duration" />
         </div>
-        <div class="mb-3">
+        <div class="mb-3" id="divGenres">
           <p id="pGenres">Genres</p>
           <label for="action">Action</label>
-          <input type="checkbox" id="action" class="infoInp" value="Action" />
+          <input
+            type="checkbox"
+            id="action"
+            class="infoInp"
+            value="Action"
+            required
+          />
           <label for="adventure">Adventure</label>
           <input
             type="checkbox"
@@ -99,20 +112,29 @@
         </div>
         <div class="mb-3">
           <label for="rate" class="form-label">Rate</label>
-          <input type="number" class="form-control" id="rate" />
+          <input
+            type="number"
+            class="form-control"
+            id="rate"
+            step="0.01"
+            min="1"
+            max="10"
+            required
+          />
         </div>
         <div class="mb-3">
           <label for="poster" class="form-label">Poster</label>
-          <input type="url" class="form-control" id="poster" />
+          <input type="url" class="form-control" id="poster" required />
         </div>
         <button type="submit" class="btn btn-primary" id="submitButton">
-          Submit
+          Save Movie
         </button>
         <button type="button" class="btn btn-primary" id="resetButton">
           Reset
         </button>
       </form>
     </main>
-    <script src="../browser/bundle.js"></script>
+    <script src="../browser/form.js"></script>
   </body>
+  <footer></footer>
 </html>

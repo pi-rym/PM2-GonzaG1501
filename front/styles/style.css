@@ -53,6 +53,7 @@ h3 {
   margin-left: 2.2%;
   height: 16%;
   width: 26%;
+  margin-top: 1.6%;
 }
 .targ img {
   position: relative;
@@ -97,6 +98,30 @@ form {
 #pGenres {
   margin-bottom: 1%;
 }
+#divGenres {
+  margin-left: 1%;
+}
 .infoInp {
-  margin-right: 2%;
+  margin: 0% 0.93%;
+}
+#formu {
+  width: 32.9em;
+}
+#historia {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.658);
+  padding: 2%;
+}
+h1 {
+  color: white;
+  text-align: center;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.411);
+  color: rgba(255, 255, 255, 0.856);
+}
+footer p {
+  margin: 0% 1%;
 }
